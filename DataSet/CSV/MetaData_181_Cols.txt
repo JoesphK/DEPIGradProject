@@ -1,0 +1,181 @@
+SEQN: Respondent sequence number
+ALQ111: Ever had a drink of any kind of alcohol
+ALQ121: Past 12 mos how often drink alc bev
+ALQ151: Ever have 4/5 or more drinks every day
+BAQ321A: Past 12 months, problems with vertigo
+BAQ321B: Past 12 months, prblms w/blurring vision
+BAQ321C: Past 12 months, problems with unsteady
+BAQ321D: Past 12 months, problems w/light-headed
+BAQ530: Past 5 years, how many times fallen?
+BAXMSTAT: MRT exam status
+BAX5STAT: Eligibility for Condition 5
+BAQ110: Can stand on your own?
+BAQ121: Are you currently wearing a leg brace?
+BAQ125: Injury to foot, leg, or hip
+BAQ132: Problems with dizzy, past 24 hours
+BAQ140: Last 12 months, fallen due to dizziness
+BAQ150: Do you have neck pain now?
+BAQ173: Are you okay to begin this balance test?
+BMDSTATS: Body Measures Component Status Code
+BMXWT: Weight (kg)
+BMXHT: Standing Height (cm)
+BMXBMI: Body Mass Index (kg/m**2)
+BMXLEG: Upper Leg Length (cm)
+BMXARML: Upper Arm Length (cm)
+BMXARMC: Arm Circumference (cm)
+BMXWAIST: Waist Circumference (cm)
+BMXHIP: Hip Circumference (cm)
+BPQ020: Ever told you had high blood pressure
+BPQ080: Doctor told you - high cholesterol level
+BPQ101D: Taking meds to lower blood cholesterol?
+BPAOARM: Arm selected - oscillometric
+BPAOCSZ: Coded cuff size - oscillometric
+BPXOSY1: Systolic - 1st oscillometric reading
+BPXODI1: Diastolic - 1st oscillometric reading
+BPXOSY2: Systolic - 2nd oscillometric reading
+BPXODI2: Diastolic - 2nd oscillometric reading
+BPXOSY3: Systolic - 3rd oscillometric reading
+BPXODI3: Diastolic - 3rd oscillometric reading
+BPXOPLS1: Pulse - 1st oscillometric reading
+BPXOPLS2: Pulse - 2nd oscillometric reading
+BPXOPLS3: Pulse - 3rd oscillometric reading
+LBXWBCSI: White blood cell count (1000 cells/uL)
+LBXLYPCT: Lymphocyte percent (%)
+LBXMOPCT: Monocyte percent (%)
+LBXNEPCT: Segmented neutrophils percent (%)
+LBXEOPCT: Eosinophils percent (%)
+LBXBAPCT: Basophils percent (%)
+LBDLYMNO: Lymphocyte number (1000 cells/uL)
+LBDMONO: Monocyte number (1000 cells/uL)
+LBDNENO: Segmented neutrophils num (1000 cell/uL)
+LBDEONO: Eosinophils number (1000 cells/uL)
+LBDBANO: Basophils number (1000 cells/uL)
+LBXRBCSI: Red blood cell count (million cells/uL)
+LBXHGB: Hemoglobin (g/dL)
+LBXHCT: Hematocrit (%)
+LBXMCVSI: Mean cell volume (fL)
+LBXMC: Mean Cell Hgb Conc. (g/dL)
+LBXMCHSI: Mean cell hemoglobin (pg)
+LBXRDW: Red cell distribution width (%)
+LBXPLTSI: Platelet count (1000 cells/uL)
+LBXMPSI: Mean platelet volume (fL)
+LBXNRBC: Nucleated red blood cells (/100 WBC)
+DBQ930: Main meal planner/preparer
+DBQ935: Shared meal planning/preparing duty
+DBQ940: Main food shopper
+DBQ945: Shared food shopping duty
+SDDSRVYR: Data release cycle
+RIDSTATR: Interview/Examination status
+RIAGENDR: Gender
+RIDAGEYR: Age in years at screening
+RIDRETH1: Race/Hispanic origin
+RIDRETH3: Race/Hispanic origin w/ NH Asian
+RIDEXMON: Six-month time period
+DMQMILIZ: Served active duty in US Armed Forces
+DMDBORN4: Country of birth
+DMDEDUC2: Education level - Adults 20+
+DMDMARTZ: Marital status
+DMDHHSIZ: Total number of people in the Household
+WTINT2YR: Full sample 2-year interview weight
+WTMEC2YR: Full sample 2-year MEC exam weight
+SDMVSTRA: Masked variance pseudo-stratum
+SDMVPSU: Masked variance pseudo-PSU
+INDFMPIR: Ratio of family income to poverty
+DIQ010: Doctor told you have diabetes
+DIQ160: Ever told you have prediabetes
+DIQ180: Had blood tested past three years
+WTDRD1: Dietary day one sample weight
+DSDCOUNT: Total # of Dietary Supplements Taken
+DSDANCNT: Total # of Antacids Taken
+DSD010: Any Dietary Supplements Taken?
+DSD010AN: Any Antacids Taken?
+LBDRFO: RBC folate (ng/mL)
+LBDRFOSI: RBC folate (nmol/L)
+LBDFOTSI: Serum total folate (nmol/L)
+LBDFOT: Serum total folate (ng/mL)
+LBXSF1SI: 5-Methyl-tetrahydrofolate (nmol/L)
+LBDSF1LC: 5-Methyl-tetrahydrofolate cmt
+LBXSF2SI: Folic acid (nmol/L)
+LBDSF2LC: Folic acid cmt
+LBXSF3SI: 5-Formyl-tetrahydrofolate (nmol/L)
+LBDSF3LC: 5-Formyl-tetrahydrofolate cmt
+LBXSF4SI: Tetrahydrofolate (nmol/L)
+LBDSF4LC: Tetrahydrofolate cmt
+LBXSF5SI: 5,10-Methenyl-tetrahydrofolate (nmol/L)
+LBDSF5LC: 5,10-Methenyl-tetrahydrofolate cmt
+LBXSF6SI: Mefox oxidation product (nmol/L)
+LBDSF6LC: Mefox oxidation product cmt
+LBXGH: Glycohemoglobin (%)
+LBDHDD: Direct HDL-Cholesterol (mg/dL)
+LBDHDDSI: Direct HDL-Cholesterol (mmol/L)	
+LBXHSCRP: HS C-Reactive Protein (mg/L)
+LBDHRPLC: HS C-Reactive Protein Comment Code
+HSQ590: Blood ever tested for HIV virus? 
+LBXIHG: Mercury, inorganic (ug/L)
+LBDIHGSI: Mercury, inorganic (nmol/L)
+LBDIHGLC: Mercury, inorganic comment code
+LBXBGE: Mercury, ethyl (ug/L)
+LBDBGESI: Mercury, ethyl (nmol/L)
+LBDBGELC: Mercury, ethyl comment code
+LBXBGM: Mercury, methyl (ug/L)
+LBDBGMSI: Mercury, methyl (nmol/L)
+LBDBGMLC: Mercury, methyl comment code
+LUAXSTAT: Elastography exam status			 
+LUAPNME: Exam wand type
+LUANMVGP: Count:complete measures from final wand
+LUANMTGP: Count:measures attempted with final wand
+LUXSMED: Median stiffness (E), kilopascals (kPa)
+LUXSIQR: Stiffness E interquartile range (IQRe)
+LUXSIQRM: Ratio: Stiffness IQRe / median E
+LUXCAPM: Median CAP, decibels per meter (dB/m)
+LUXCPIQR: CAP interquartile range (IQRc)
+OHQ845: Rate the health of your teeth and gums
+OHQ620: How often last yr. had aching in mouth?
+OHQ630: How often felt bad because of mouth?
+OHQ640: Last yr had diff w/ job because of mouth
+OHQ660: Last yr avoid some food because of mouth
+OHQ670: Last yr couldn't eat because of mouth
+OHQ680: Last yr embarrassed because of mouth
+PAD790Q: Frequency of moderate LTPA
+PAD790U: Moderate LTPA unit (day/week/month/year)
+PAD800: Minutes moderate LTPA
+PAD810Q: Frequency of vigorous LTPA
+PAD680: Minutes sedentary activity
+LBXBPB: Blood lead (ug/dL)
+LBDBPBSI: Blood lead (umol/L)
+LBDBPBLC: Blood lead comment code
+LBXBCD: Blood cadmium (ug/L)
+LBDBCDSI: Blood cadmium (nmol/L)
+LBDBCDLC: Blood cadmium comment code
+LBXTHG: Blood mercury, total (ug/L)
+LBDTHGSI: Blood mercury, total (nmol/L)
+LBDTHGLC: Blood mercury, total comment code
+LBXBSE: Blood selenium (ug/L)
+LBDBSESI: Blood selenium (umol/L)
+LBDBSELC: Blood selenium comment code
+LBXBMN: Blood manganese (ug/L)
+LBDBMNSI: Blood manganese (nmol/L)
+LBDBMNLC: Blood manganese comment code
+RXQ510: Dr told to take daily low-dose aspirin?
+SLQ300: Usual sleep time on weekdays or workdays
+SLQ310: Usual wake time on weekdays or workdays
+SLD012: Sleep hours - weekdays or workdays
+SLQ320: Usual sleep time on weekends
+SLQ330: Usual wake time on weekends
+SLD013: Sleep hours - weekends
+SMQ020: Smoked at least 100 cigarettes in life
+SMAQUEX2: Questionnaire Mode Flag
+LBXTC: Total Cholesterol (mg/dL)
+LBDTCSI: Total Cholesterol (mmol/L)
+LBXVIDMS: 25OHD2+25OHD3 (nmol/L)
+LBDVIDLC: 25OHD2+25OHD3 comment code
+LBXVD2MS: 25OHD2 (nmol/L)
+LBDVD2LC: 25OHD2 comment code
+LBXVD3MS: 25OHD3 (nmol/L)
+LBDVD3LC: 25OHD3 comment code
+LBXVE3MS: epi-25OHD3 (nmol/L)
+LBDVE3LC: epi-25OHD3 comment code
+WHD010: Current self-reported height (inches)
+WHD020: Current self-reported weight (pounds)
+WHD050: Self-reported weight - 1 yr ago (pounds)
+WHQ070: Tried to lose weight in past year
