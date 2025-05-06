@@ -1,4 +1,5 @@
 from abc import abstractmethod,  ABC
+from sklearn.model_selection import train_test_split
 
 class DataSetTrainer(ABC):
     '''
@@ -7,11 +8,19 @@ class DataSetTrainer(ABC):
 
     saved_model_path = None
 
-    def __init__(self, dataset):
+    def __init__(self, X, y, test_size=0.2, random_state=42):
         '''
         Initialize with the dataset.
         '''
-        super().__init__(dataset)
+        self.xTrain, self.xTest, self.yTrain, self.yTest = train_test_split(
+            X, y, 
+            test_size=test_size, 
+            random_state=random_state, 
+            stratify=y
+        )
+        self.model = None
+
+        
 
     @abstractmethod
     def train(self):
