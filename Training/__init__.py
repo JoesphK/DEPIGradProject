@@ -1,4 +1,6 @@
+import os
 from abc import abstractmethod,  ABC
+import joblib
 from sklearn.model_selection import train_test_split
 
 class DataSetTrainer(ABC):
@@ -36,6 +38,14 @@ class DataSetTrainer(ABC):
         """
         pass
 
-    def save_model(self, working_directory_path):
+    def save_model(self, working_directory_path, model_file_name):
+        if self.model is None:
+            raise ValueError("Model has not been trained yet.")
         
-        pass
+        if not os.path.exists(f"{working_directory_path}/models"):
+            os.makedirs(f"{working_directory_path}/models")
+
+        self.saved_model_path = os.path.join(f"{working_directory_path}/models", f'{model_file_name}.joblib')
+        
+        joblib.dump(self.model, self.saved_model_path)
+        print(f"Model saved to {self.saved_model_path}")   
