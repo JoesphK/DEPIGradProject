@@ -9,11 +9,9 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.preprocessing import StandardScaler
 
 # Load data
-df = pd.read_csv('DataSet/CSV/balanced.csv')
+df = pd.read_csv('DataSet/CSV/Diabetes.csv')
 
-# Data cleaning
-df = df.dropna(subset=['DiagnosedWithDiabetes'])  # Remove rows where diabetes status is missing
-df['DiagnosedWithDiabetes'] = df['DiagnosedWithDiabetes'].astype(int)
+
 
 # Initialize the app
 app = Dash(__name__)
@@ -27,13 +25,13 @@ app.layout = html.Div([
         dcc.Markdown("""
         This dataset contains health metrics for **{} individuals** with **{}% diagnosed with diabetes**.
         Explore the relationships between different health factors and diabetes diagnosis.
-        """.format(len(df), round(df['DiagnosedWithDiabetes'].mean()*100, 1))),
+        """.format(len(df), round(df['diabetic'].mean()*100, 1))),
         
         html.Div([
             dcc.Dropdown(
                 id='xaxis-column',
                 options=[{'label': col, 'value': col} for col in df.select_dtypes(include=np.number).columns],
-                value='AgeInYears'
+                value='age'
             ),
             dcc.RadioItems(
                 id='xaxis-type',
@@ -47,7 +45,7 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id='yaxis-column',
                 options=[{'label': col, 'value': col} for col in df.select_dtypes(include=np.number).columns],
-                value='BodyMassIndex'
+                value='bmi'
             ),
             dcc.RadioItems(
                 id='yaxis-type',
@@ -63,7 +61,7 @@ app.layout = html.Div([
             dcc.Dropdown(
                 id='hist-column',
                 options=[{'label': col, 'value': col} for col in df.select_dtypes(include=np.number).columns],
-                value='BodyMassIndex'
+                value='bmi'
             ),
             dcc.Graph(id='hist-graphic')
         ])
@@ -80,10 +78,10 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='risk-factor-selector',
             options=[{'label': col, 'value': col} for col in [
-                'BodyMassIndex', 'AgeInYears', 'WaistCircumferenceCm', 
-                'SerumGlucose', 'HighDensityLipoprotein', 'HighSensitivityCRP'
+                'bmi', 'age', 'weight', 
+                'glucose', 'hypertensive', 'diastolic_bp', 'systolic_bp','gender', 'family_hypertension', 'family_diabetes'
             ]],
-            value=['BodyMassIndex', 'AgeInYears'],
+            value=['bmi', 'age'],
             multi=True
         ),
         
@@ -150,7 +148,7 @@ app.layout = html.Div([
 def update_graph(xaxis_column_name, yaxis_column_name, xaxis_type, yaxis_type):
     fig = px.scatter(
         df, x=xaxis_column_name, y=yaxis_column_name,
-        color='DiagnosedWithDiabetes',
+        color='diabetic',
         hover_data=['AgeInYears', 'BodyMassIndex', 'SerumGlucose'],
         title=f"{yaxis_column_name} vs {xaxis_column_name}"
     )
@@ -167,7 +165,7 @@ def update_graph(xaxis_column_name, yaxis_column_name, xaxis_type, yaxis_type):
     Input('hist-column', 'value'))
 def update_hist(column_name):
     fig = px.histogram(
-        df, x=column_name, color='DiagnosedWithDiabetes',
+        df, x=column_name, color='diabetic',
         marginal="box", barmode="overlay",
         title=f"Distribution of {column_name}"
     )
@@ -183,7 +181,7 @@ def update_risk_factors(selected_factors):
     fig = px.box(
         df, 
         y=selected_factors, 
-        color='DiagnosedWithDiabetes',
+        color='diabetic',
         facet_col='variable',
         facet_col_wrap=min(3, len(selected_factors)),
         boxmode="group"
@@ -202,9 +200,9 @@ def update_risk_factors(selected_factors):
     Input('feature-threshold', 'value'))
 def update_model(threshold):
     # Prepare data
-    features = df.select_dtypes(include=np.number).columns.drop('DiagnosedWithDiabetes')
+    features = df.select_dtypes(include=np.number).columns.drop('diabetic')
     X = df[features].fillna(df[features].median())
-    y = df['DiagnosedWithDiabetes']
+    y = df['diabetic']
     
     # Train/test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
