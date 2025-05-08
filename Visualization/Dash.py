@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,9 +15,10 @@ st.set_page_config(
 )
 
 # Load data
+current_working_dir = os.getcwd()
+path = os.path.join(current_working_dir, "DataSet/CSV/Diabetes.csv")
 
-
-df = pd.read_csv('C:/DEPI_Project - 2025/DataSet/CSV/Diabetes.csv')
+df = pd.read_csv(path)
 
 # Preprocess data
 df['age_group'] = pd.cut(df['age'], bins=[0, 30, 45, 60, 100], labels=['<30', '30-45', '45-60', '60+'])
